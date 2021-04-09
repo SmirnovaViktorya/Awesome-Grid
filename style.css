@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.sectionAwesome {
+  display: grid;
+  grid-template-areas:
+    "leftIndent title title title title title rightIndent"
+    "leftIndent gapRow gapRow gapRow gapRow gapRow rightIndent"
+    "leftIndent item1 gapCol1 item2 gapCol2 item3 rightIndent";
+  grid-template-columns: 3fr 5fr 1fr 5fr 1fr 5fr 3fr;
+  padding-top: 102px;
+  padding-bottom: 111px;
+  text-align: center;
+}
+
+#title {
+  grid-area: title;
+}
+
+#leftIndent {
+  grid-area: leftIndent;
+}
+
+#rightIndent {
+  grid-area: rightIndent;
+}
+
+#gapRow {
+  grid-area: gapRow;
+  height: 66px;
+}
+
+#gapCol1 {
+  grid-area: gapCol1;
+}
+
+#gapCol2 {
+  grid-area: gapCol2;
+}
+
+#item1 {
+  grid-area: item1;
+}
+
+#item2 {
+  grid-area: item2;
+}
+
+#item3 {
+  grid-area: item3;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.line {
+  width: 64px;
+  height: 2px;
+  margin: 22px auto;
+  background-color: #ff8b38;
+}
+
+.description {
+  font-size: 14px;
+  color: #86878b;
+}
+
+.itemImage {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 27px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #ff8b38;
+  border-radius: 50%;
+}
+
+.lamp {
+  background-image: url("images/lamp.jpg");
+}
+
+.keyboard {
+  background-image: url("images/keyboard.jpg");
+}
+
+.lightning {
+  background-image: url("images/lightning.jpg");
+}
+
+.itemTitle {
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .sectionAwesome {
+    grid-template-areas:
+      "leftIndent title rightIndent"
+      "leftIndent gapRow rightIndent"
+      "leftIndent item1 rightIndent"
+      "leftIndent gapCol1 rightIndent"
+      "leftIndent item2 rightIndent"
+      "leftIndent gapCol2 rightIndent"
+      "leftIndent item3 rightIndent";
+    grid-template-columns: 1fr 8fr 1fr;
+  }
+
+  #gapCol1,
+  #gapCol2 {
+    height: 15px;
+  }
+
+  #item1,
+  #item2,
+  #item3 {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  #item1,
+  #item2,
+  #item3 {
+    padding: 0;
+  }
+}
